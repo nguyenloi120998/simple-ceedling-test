@@ -1,4 +1,4 @@
-# Simple Ceedling Test Project
+# Simple Ceedling Test
 
 Run unit tests for code C on Embedded Linux using **Ceedling**, **Unity**, and **CMock**.
 
@@ -143,7 +143,7 @@ In `project.yml`, enable the following plugins and settings:
 - `:html_artifact_filename: TestCoverageReport.html`
 - `:html_title: Test Coverage Report`
 
-Run the following command:
+Run the command:
 
 ```bash
 ceedling gcov:all
@@ -170,13 +170,15 @@ project.yml         # Ceedling config
 ---
 
 ## 🔗 Notes
-
 - Ceedling automatically includes Unity and CMock — no need to install them separately.
 - To generate code coverage report:
   ```bash
   ceedling gcov:all
   ```
   Check reports in `build/artifacts/gcov/`.
+- Reference:
+  https://github.com/ThrowTheSwitch/Unity
+  https://github.com/ThrowTheSwitch/Ceedling
 
 ---
 
