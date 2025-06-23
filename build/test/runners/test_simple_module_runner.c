@@ -2,11 +2,13 @@
 
 /*=======Automagically Detected Files To Include=====*/
 #include "unity.h"
+#include "cmock.h"
 /* injected defines for unity settings, etc */
 #ifndef UNITY_EXCLUDE_FLOAT
 #define UNITY_EXCLUDE_FLOAT
 #endif /* UNITY_EXCLUDE_FLOAT */
 #include "simple_module.h"
+#include "mock_helper.h"
 
 int GlobalExpectCount;
 int GlobalVerifyOrder;
@@ -19,6 +21,7 @@ extern void test_sum_operation(void);
 extern void test_sub_operation(void);
 extern void test_mul_operation(void);
 extern void test_div_operation(void);
+extern void test_sum_with_mocked_value(void);
 
 
 /*=======Mock Management=====*/
@@ -27,12 +30,15 @@ static void CMock_Init(void)
   GlobalExpectCount = 0;
   GlobalVerifyOrder = 0;
   GlobalOrderError = NULL;
+  mock_helper_Init();
 }
 static void CMock_Verify(void)
 {
+  mock_helper_Verify();
 }
 static void CMock_Destroy(void)
 {
+  mock_helper_Destroy();
 }
 
 /*=======Test Reset Options=====*/
@@ -98,16 +104,20 @@ static void run_test(UnityTestFunction func, const char* name, UNITY_LINE_TYPE l
       UNITY_PRINT_EOL();
       UnityPrint("  test_div_operation");
       UNITY_PRINT_EOL();
+      UnityPrint("  test_sum_with_mocked_value");
+      UNITY_PRINT_EOL();
       return 0;
     }
     return parse_status;
   }
 #endif
   UnityBegin("test_simple_module.c");
-  run_test(test_sum_operation, "test_sum_operation", 7);
-  run_test(test_sub_operation, "test_sub_operation", 12);
-  run_test(test_mul_operation, "test_mul_operation", 17);
-  run_test(test_div_operation, "test_div_operation", 22);
+  run_test(test_sum_operation, "test_sum_operation", 8);
+  run_test(test_sub_operation, "test_sub_operation", 13);
+  run_test(test_mul_operation, "test_mul_operation", 18);
+  run_test(test_div_operation, "test_div_operation", 23);
+  run_test(test_sum_with_mocked_value, "test_sum_with_mocked_value", 28);
 
+  CMock_Guts_MemFreeFinal();
   return UNITY_END();
 }

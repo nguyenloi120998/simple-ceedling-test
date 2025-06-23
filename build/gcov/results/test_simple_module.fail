@@ -5,29 +5,33 @@
   :basename: test_simple_module.c
 :successes:
 - :test: test_sub_operation
-  :line: 12
+  :line: 13
   :message: ''
   :unity_test_time: 0
 - :test: test_mul_operation
-  :line: 17
+  :line: 18
+  :message: ''
+  :unity_test_time: 0
+- :test: test_sum_with_mocked_value
+  :line: 28
   :message: ''
   :unity_test_time: 0
 :failures:
 - :test: test_sum_operation
-  :line: 8
+  :line: 9
   :message: Expected 6 Was 5
   :unity_test_time: 0
 - :test: test_div_operation
-  :line: 24
+  :line: 25
   :message: Expected 1 Was 0
   :unity_test_time: 0
 :ignores: []
 :counts:
-  :total: 4
-  :passed: 2
+  :total: 5
+  :passed: 3
   :failed: 2
   :ignored: 0
 :stdout:
 - libgcov profiling error:/home/Loi/Ampacs/AmpacsSDK/TDD_C/my_project/build/gcov/out/test_simple_module/simple_module.gcda:overwriting
   an existing profile data with a different timestamp
-:time: 0.0011610319997998886
+:time: 0.001048338002874516

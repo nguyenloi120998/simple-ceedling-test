@@ -7,7 +7,7 @@ Run unit tests for code C using **Ceedling**, **Unity**, and **CMock**.
 - **Ceedling**: A build and test management tool for C.
 - **Unity**: The unit test framework (provides TEST\_ASSERT\_\* macros).
 - **CMock**: Automatically generates mock functions from header files.
-- **Gcov**: Optional tool for code coverage reporting.
+- **Gcov**: Tool for code coverage reporting.
 
 ---
 
@@ -170,15 +170,15 @@ project.yml         # Ceedling config
 ---
 
 ## 🔗 Notes
-- Ceedling automatically includes Unity and CMock — no need to install them separately.
-- To generate code coverage report:
+
+- Ceedling is often used with the **Test Driven Development (TDD)** approach — where you write tests first, then write the code. You can search for “TDD” to learn more about this method.
+- Ceedling automatically includes **Unity** and **CMock** — you don’t need to install them separately.
+- To generate a code coverage report:
   ```bash
   ceedling gcov:all
   ```
   Check reports in `build/artifacts/gcov/`.
 - References:
-https://github.com/ThrowTheSwitch/Unity
-https://github.com/ThrowTheSwitch/Ceedling
-
----
+  - [Unity on GitHub](https://github.com/ThrowTheSwitch/Unity)
+  - [Ceedling on GitHub](https://github.com/ThrowTheSwitch/Ceedling)
 
