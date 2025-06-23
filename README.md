@@ -1,6 +1,6 @@
 # Simple Ceedling Test Project
 
-This project demonstrates how to create and run unit tests for C code using **Ceedling**, **Unity**, and **CMock**.
+Run unit tests for C Code Embedded linux using **Ceedling**, **Unity**, and **CMock**.
 
 ## 📌 What is included?
 
@@ -11,7 +11,7 @@ This project demonstrates how to create and run unit tests for C code using **Ce
 
 ---
 
-## 🚀 Installation (Toolchain / Environment)
+## 🚀 Installation (Tools / Environment)
 
 ### 1️⃣ Install Ruby (if not installed)
 
@@ -80,6 +80,12 @@ ceedling new my_project
 cd my_project
 ```
 
+You can write your own test cases in `my_project`, or you can clone this simple example project to try it out:
+
+```
+https://github.com/nguyenloi120998/simple-ceedling-test
+```
+
 ### Run all tests
 
 ```bash
@@ -121,6 +127,34 @@ BUILD FAILURE SUMMARY
 Unit test failures.
 ```
 
+The output above shows the test results in the terminal.\
+Next, we will generate a detailed coverage report using gcov.
+
+---
+
+## 📊 Generate Coverage Report
+
+In `project.yml`, enable the following plugins and settings:
+
+- `gcov`
+- `module_generator`
+- `report_tests_pretty_stdout`
+- `html_detailed`
+- `:html_artifact_filename: TestCoverageReport.html`
+- `:html_title: Test Coverage Report`
+
+Run the following command:
+
+```bash
+ceedling gcov:all
+```
+
+Check the coverage report at:
+
+```
+my_project/build/artifacts/gcov/gcovr/TestCoverageReport*.html
+```
+
 ---
 
 ## 📂 Project Structure
@@ -145,8 +179,4 @@ project.yml         # Ceedling config
   Check reports in `build/artifacts/gcov/`.
 
 ---
-
-## 🗨 License
-
-This is a simple educational example project for learning purposes.
 
