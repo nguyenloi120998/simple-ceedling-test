@@ -1,0 +1,9 @@
+build/
+*.gcda
+*.gcno
+*.gcov
+*.o
+*.d
+*.log
+*.swp
+*.swo
