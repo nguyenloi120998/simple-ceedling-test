@@ -1,0 +1,31 @@
+---
+:source:
+  :file: test/test_simple_module.c
+  :dirname: test
+  :basename: test_simple_module.c
+:successes:
+- :test: test_sub_operation
+  :line: 12
+  :message: ''
+  :unity_test_time: 0
+- :test: test_mul_operation
+  :line: 17
+  :message: ''
+  :unity_test_time: 0
+:failures:
+- :test: test_sum_operation
+  :line: 8
+  :message: Expected 6 Was 5
+  :unity_test_time: 0
+- :test: test_div_operation
+  :line: 24
+  :message: Expected 1 Was 0
+  :unity_test_time: 0
+:ignores: []
+:counts:
+  :total: 4
+  :passed: 2
+  :failed: 2
+  :ignored: 0
+:stdout: []
+:time: 0.0007564259994978784

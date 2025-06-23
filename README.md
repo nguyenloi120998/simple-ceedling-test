@@ -1,6 +1,6 @@
 # Simple Ceedling Test Project
 
-Run unit tests for C Code Embedded linux using **Ceedling**, **Unity**, and **CMock**.
+Run unit tests for code C on Embedded Linux using **Ceedling**, **Unity**, and **CMock**.
 
 ## 📌 What is included?
 
@@ -62,7 +62,7 @@ Expected output:
 
 ---
 
-### 3️⃣ (Optional) Install gcov for test coverage report
+### 3️⃣ Install gcov for test coverage report
 
 ```bash
 sudo apt install gcov
