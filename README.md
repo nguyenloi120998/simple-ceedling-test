@@ -1,6 +1,6 @@
 # Simple Ceedling Test
 
-Run unit tests for code C on Embedded Linux using **Ceedling**, **Unity**, and **CMock**.
+Run unit tests for code C using **Ceedling**, **Unity**, and **CMock**.
 
 ## 📌 What is included?
 
@@ -176,9 +176,9 @@ project.yml         # Ceedling config
   ceedling gcov:all
   ```
   Check reports in `build/artifacts/gcov/`.
-- Reference:
-  https://github.com/ThrowTheSwitch/Unity
-  https://github.com/ThrowTheSwitch/Ceedling
+- References:
+https://github.com/ThrowTheSwitch/Unity
+https://github.com/ThrowTheSwitch/Ceedling
 
 ---
 
