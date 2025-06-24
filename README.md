@@ -83,7 +83,7 @@ cd my_project
 You can write your own test cases in `my_project`, or you can clone this simple example project to try it out:
 
 ```
-https://github.com/nguyenloi120998/simple-ceedling-test
+git clone https://github.com/nguyenloi120998/simple-ceedling-test
 ```
 
 ### Run all tests
